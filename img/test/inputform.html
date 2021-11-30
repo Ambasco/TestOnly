@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>The input form attribute</h1>
+
+    <p>The form attribute specifies the form an input element belongs to.</p>
+
+    <form action="/action_page.php" id="form1">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>The "Last name" field below is outside the form element, but still part of the form.</p>
+
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" form="form1">
+
+
+    <!--The formaction attribute works with the following input types: submit and image.
+        
+        An HTML form with two submit buttons, with different actions:-->
+    <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+    </form>
+
+
+
+    <!--form target
+    A form with two submit buttons, with different target windows:
+    -->
+
+    <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+    </form>
+</body>
+
+</html>
